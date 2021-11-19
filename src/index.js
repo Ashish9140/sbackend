@@ -4,7 +4,6 @@ const adminRouter = require("./routes/admin");
 const siteRouter = require("./routes/site")
 const cors = require("cors");
 require("./db/mongoose");
-const PORT = process.env.PORT || 3001;
 
 const mongoose = require("mongoose");
 
@@ -15,6 +14,6 @@ app.use(userRouter);
 app.use(adminRouter);
 app.use(siteRouter);
 
-app.listen(PORT, () => {
-  console.log("Server setup at 3000: " + PORT);
+app.listen(process.env.PORT, () => {
+  console.log("Server setup at 3000: ");
 });
